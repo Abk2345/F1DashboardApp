@@ -15,6 +15,17 @@ uses:
 8. Writing app.js to integrate all the backend functionalities with middleware to handle errors in api calls
 9. Writing all the api's requirements from Angular front-end
 
+# Api Endpoints
+1. Get All drivers data: http://localhost:3000/drivers
+2. Get data for highlights in dashboard: http://localhost:3000/highlights-data
+3. Get data for charts in dashboard: http://localhost:3000/getDashboardChartsData
+4. Get data for leaderboard: http://localhost:3000/leaderboard-data
+5. Get data for champions list: http://localhost:3000/champions-data
+6. Get data for driver names list: http://localhost:3000/driver-names
+7. Get data for country names list: http://localhost:3000/country-names
+8. Get data corresponding to filtered driver name: http://localhost:3000/driver-data/{driver_name}
+9. Get data corresponding to filtered country_name: http://localhost:3000/drivers-country-data/{country_name}
+
 # Front-end creation
 1. Setting up Angular project as frontend using command (ng new frontend)
 2. Generating 6 components for the dashboard project using command (ng g c comp_name)
@@ -25,7 +36,7 @@ uses:
 7. Using library canvasjs charts for showing charts in the app
 8. Modifying and cleaning the code
 
-# Docker Image creation and push
+# Docker Image creation and push to Docker Hub
 1. writing Dockerfile, .dockerignore files inside frontend for creation of docker image of angular app
 2. Running command: (docker build -t frontend-angular-app .) for creation of front end image
 3. Running image with the command: (docker run -d -p 4200:80 angular-app-frontend) for running the image
@@ -53,7 +64,7 @@ uses:
     2. Download the docker-image of frontend: https://hub.docker.com/r/abhi731/f1-dashboard-frontend-app
     3. Run the frontend docker image using command: (docker run -d -p 4200:80 abhi731/f1-dashboard-frontend-app), this will run the app on port 4200
     4. Run the backend docker image using docker-compose file inside the folder "Run-docker-image-compose-file" by goign to this folder and running command (docker-compose up --build)
-    5. If error comes as F1DriversDatabase database does not exit, open new terminal and run these two commands to create this database after running above command (docker-compose up --build), these two commands are: (docker exec -it postgres-container psql -U postgres) and then in the shell (CREATE DATABASE "F1DriversDatabase";) to create the database
+    5. If error comes persists as F1DriversDatabase database does not exit, open new terminal and run these two commands to create this database after running above command (docker-compose up --build), these two commands are: (docker exec -it postgres-container psql -U postgres) and then in the shell (CREATE DATABASE "F1DriversDatabase";) to create the database
     6. Now, closing all the terminals, open one new terminal in the docker-compose folder and execute command (docker-compose down -v), then (docker-compose up --build) to run the backend properly, it will insert all the data first and then run the backend on port 3000
 
 # Hope you enjoyed!
