@@ -1,0 +1,34 @@
+<mat-table [dataSource]="leaderboards_data" class="mat-elevation-z8" matSort #empTbSort="matSort">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+    </ng-container>
+
+    <!-- Country Column -->
+    <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef>Country</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.country }}</mat-cell>
+    </ng-container>
+
+    <!-- Seasons Competed Column -->
+    <ng-container matColumnDef="seasons_competed">
+        <mat-header-cell *matHeaderCellDef>Seasons Competed</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.seasons_competed }}</mat-cell>
+    </ng-container>
+
+    <!-- Drivers Championship Column -->
+    <ng-container matColumnDef="drivers_championship">
+        <mat-header-cell *matHeaderCellDef>Drivers Championship</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.drivers_championship }}</mat-cell>
+    </ng-container>
+
+    <!-- Points Column -->
+    <ng-container matColumnDef="points">
+        <mat-header-cell *matHeaderCellDef>Points</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.points }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

@@ -1,0 +1,53 @@
+<mat-nav-list style="background-color: primary; width: 250px;">
+  <!-- <div class="image-container">
+        <img src="../../../assets/f1_logo.png" alt="F1 Logo Image" class="sidebar-image">
+     </div> -->
+  <div class="image-container">
+    <img mat-card-image
+      src="https://w0.peakpx.com/wallpaper/176/551/HD-wallpaper-formula-1-new-logo-creative-f1-new-logo-f1-gray-backgroud-formula-1-new-logo-formula-1-2018-new-logo-of-f1.jpg"
+      alt="Photo of a F1 Logo" class="sidebar-image">
+  </div>
+  <a mat-list-item routerLink="/dashboard">
+    <button mat-flat-button color="accent" style="width: 90%;">Dashboard</button>
+  </a>
+  <a mat-list-item routerLink="/leaderboard">
+    <button mat-flat-button color="accent" style="width: 90%;">Leaderboard</button>
+  </a>
+  <a mat-list-item routerLink="/champions">
+    <button mat-flat-button color="accent" style="width: 90%;">Champions List</button>
+  </a>
+  <div>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter country name</mat-label>
+        <input #input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto"
+          (input)="filter()" (focus)="filter()">
+        <mat-autocomplete requireSelection #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <a mat-list-item [routerLink]="['/filter-country', myControl.value]">
+      <button mat-flat-button color="accent" style="width: 90%;" (click)="refreshPage1()">Search By Country</button>
+    </a>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Driver's name</mat-label>
+      <input #input2 type="text" placeholder="Pick one" matInput [formControl]="myControl2" [matAutocomplete]="auto2"
+        (input)="filter2()" (focus)="filter2()">
+      <mat-autocomplete requireSelection #auto2="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions2" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <div>
+    <a mat-list-item [routerLink]="['/filter-driver', myControl2.value]">
+      <button mat-flat-button color="accent" style="width: 90%;" (click)="refreshPage2()">Search By Name</button>
+    </a>
+  </div>
+</mat-nav-list>

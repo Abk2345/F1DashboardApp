@@ -1,0 +1,35 @@
+version: "3.7"
+
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+  postgres:
+    networks:
+      - mynetwork
+    container_name: postgres-container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: F1DriversDatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tutorial-db:/var/lib/postgresql/data
+
+  myapp:
+    networks:
+      - mynetwork
+    image: abhi731/f1-dashboard-backend-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+volumes:
+  tutorial-db:

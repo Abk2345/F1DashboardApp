@@ -1,0 +1,22 @@
+<!-- Outer App  -->
+<mat-toolbar color="primary">
+  <span>F1 Dashboard Angular App</span>
+  <span class="example-spacer"></span>
+  <a href="https://www.kaggle.com/datasets/petalme/f1-drivers-dataset">
+    <button mat-flat-button color="accent">Dataset</button>
+  </a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav mode="side" opened>
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <!-- Content -->
+  <mat-sidenav-content>
+    <div class="scrollable-content">
+    <router-outlet></router-outlet>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

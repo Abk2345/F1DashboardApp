@@ -1,0 +1,24 @@
+.example-card {
+    margin-top: 20px;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.example-card {
+    margin-top: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.charts-container{
+    max-width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.centered-title {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }

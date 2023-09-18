@@ -1,0 +1,44 @@
+1. Fix the image on the top of side nav -> done
+2. dashboards -> done
+
+6. Leaderboard me  -> done
+    1. Table : Drivername, country, number of points, championships 
+
+
+2. Drivers and no. of championships -> done
+    1. Highlight: Most number of championships
+    2. Second most number of championships
+    3. Pie chart showing number of championships
+    Data get: Drivers -> championships in descending order of championships
+
+3. Country and no. of championships -> done
+    1. Highlight on most number of championships
+    2. Second most number of championships
+    3. Pie chart showing the distribution
+    Data get: Country -> championships in decreasing order of championships
+
+4. Drivers and Highest Number  of seasons competed -> done
+    1. Highlight total number of seasons and show all years of participation
+    2. Pie chart showing numbers of years of participation
+
+5. Drivers by points, maximum points in highlights -> done
+    1. select * from "Drivers" order by "points" desc;
+
+7. Champions List: -> done
+    get all championships whose is not zero
+    select * from "Drivers" where "drivers_championship" != 0 order by "drivers_championship" desc;
+    pie chart
+
+8. Search by country ( by country, take country name as input, give autocomplete search feature) -> onclick opens a dialog to enter country name
+select * from "Drivers" where "country" = 'Germany' order by "points" desc, "drivers_championship" desc; -> done
+
+9. Search By Drivers name (same dialog input, on submission, ) -> done
+select * from "Drivers" where "country" = 'Germany' order by "points" desc, "drivers_championship" desc;
+
+10. production ready and containerization -> done
+
+11. Making Readme and uploading to github -> done
+
+12. Cleaning and organising the code properly -> have to do
+
+yayy....

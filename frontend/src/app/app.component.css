@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.scrollable-content {
+  height: calc(100vh - 64px); /* Adjust for the height of your toolbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 16px; /* Add padding to the content if needed */
+}

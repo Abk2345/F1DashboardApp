@@ -1,0 +1,27 @@
+.image-container {
+    width: 90%; /* 90% width of the sidebar */
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+    margin-top: 20px;
+    margin-bottom: 10px; /* Center the image horizontally with top margin */
+  }
+  
+  /* Style the image inside the container */
+  .sidebar-image {
+    margin-left: 15px;
+    border-radius: 10px;
+    display: block; /* Ensures that image respects width and height */
+    width: 88%; /* 100% width within the container */
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+  }
+
+  .example-full-width{
+    width: 80%; /* 90% width of the sidebar */
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+    margin-top: 20px;
+    margin-left: 20px;
+
+  }
+
+  .example-form{
+    width: 92%;
+  }

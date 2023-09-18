@@ -1,0 +1,156 @@
+<!-- data-display.component.html -->
+
+<!-- Top Highlights Drivers-->
+<div style="display: flex; justify-content: space-between;">
+  <mat-card class="example-card" style="text-align: center;">
+    <mat-card-header>
+      <mat-card-title>Total Participation (Drivers)</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+      <h3>
+        {{highlights.totalDrivers}}
+      </h3>
+    </mat-card-content>
+  </mat-card>
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Highest Participation (Drivers)</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.max_participation_num}} | {{highlights.max_participation_driver}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Highest Championship (Drivers)</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.num_championships}} | {{highlights.driver_max_championship}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Maximum points (Driver) </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.max_points}} | {{highlights.driver_max_points}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+</div>
+
+<!-- Charts -->
+<div style="display: flex; flex-direction: row; justify-content: space-between; margin: 20px;">
+  <div style="width: 45%;">
+    <canvasjs-chart [options]="chartOptions" [styles]="{ width: '100%', height: '360px' }"></canvasjs-chart>
+  </div>
+  <div style="width: 45%;">
+    <canvasjs-chart [options]="chartOptions2" [styles]="{ width: '100%', height: '360px' }"></canvasjs-chart>
+  </div>
+</div>   
+
+<!-- Top Highlights Country -->
+<div style="display: flex; justify-content: space-between;">
+  <mat-card class="example-card" style="text-align: center;">
+    <mat-card-header>
+      <mat-card-title>Total Participation (Country)</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+      <h3>
+        {{highlights.uniqueCountries}}
+      </h3>
+    </mat-card-content>
+  </mat-card>
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Highest Participation (Country)</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.max_participation_num}} | {{highlights.max_participations_country}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Highest Championship (Country)</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.num_championships}} | {{highlights.country_max_championship}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card" style="text-align: center;">
+  <mat-card-header>
+    <mat-card-title>Maximum points (Country) </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <h3>
+      {{highlights.max_points}} | {{highlights.country_max_points}}
+    </h3>
+  </mat-card-content>
+</mat-card>
+
+</div>
+
+
+
+<!-- <h1>Displaying data for drivers :</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Driver Name</th>
+        <th>Country</th>
+        <th>Seasons competed</th>
+        <th>Drivers championship</th>
+        <th>Race Entries</th>
+        <th>Race Starts</th>
+        <th>Pole positions</th>
+        <th>Race wins</th>
+        <th>Podium fastest laps</th>
+        <th>Points</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+       Use *ngFor to loop through the drivers array and display each driver -->
+      <!-- <tr *ngFor="let driver of drivers">
+        <td>{{ driver.name }}</td>
+        <td>{{ driver.country }}</td>
+        <td>{{ driver.seasons_competed }}</td>
+        <td>{{ driver.drivers_championship }}</td>
+        <td>{{ driver.race_entries }}</td>
+
+        <td>{{ driver.race_starts }}</td>
+        <td>{{ driver.pole_positions }}</td>
+        <td>{{ driver.race_wins }}</td>
+        <td>{{ driver.podium_fastest_laps }}</td>
+        <td>{{ driver.points }}</td>
+
+      </tr>
+    </tbody>
+  </table> -->

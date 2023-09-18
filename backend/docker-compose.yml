@@ -1,0 +1,35 @@
+version: "3.7"
+
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+  postgres:
+    networks:
+      - mynetwork
+    container_name: psql
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tutorial-db:/var/lib/postgresql/data
+
+  node_api:
+    networks:
+      - mynetwork
+    container_name: restapi
+    build:
+      context: .
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    ports:
+      - "3000:3000"
+volumes:
+  tutorial-db:
