@@ -2,7 +2,7 @@ const { sequelize, Sequelize } = require('../models/index'); // Import the Seque
 const { Drivers } = sequelize.models; // Import the Driver model
 
 
-// getting all drivers
+// getting all distinct country names available in the database
 const getAllCountries = async (req, res) => {
     try {
 

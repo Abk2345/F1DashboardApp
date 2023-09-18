@@ -29,7 +29,7 @@ export class DataDisplayComponent implements OnInit {
       this.highlights = data;
     })
 
-    // Twice called to load the data properly
+    // Twice called to load the data very properly
     this.getDataPoints();
     this.getDataPoints();
 
@@ -48,7 +48,6 @@ export class DataDisplayComponent implements OnInit {
       {
         sum_competed += data.max_competed[i].num_seasons_competed;
         sum_num_championships += data.max_championships[i].drivers_championship;
-
       }
 
       for(let i=0; i<data.max_competed.length; i++)
@@ -85,7 +84,7 @@ export class DataDisplayComponent implements OnInit {
         this.datapoints_max_champions.push(obj);
       }
 
-
+      // y = % time drivers have competed, x = name of driver | Country | Number of times they have competed
       this.chartOptions = {
         animationEnabled: true,
         title: {
@@ -100,7 +99,7 @@ export class DataDisplayComponent implements OnInit {
         }]
       };
     
-    // number of time drivers have become champions, x = name of driver | Country
+    // y = %  of time drivers have become champions, x = name of driver | Country | Number of times have been champions
       this.chartOptions2 = {
         animationEnabled: true,
         title: {
@@ -122,22 +121,15 @@ export class DataDisplayComponent implements OnInit {
   chartOptions: any;
   chartOptions2: any;
 
-
-
-
-// number of time drivers have participated
-// that would be objects, y = number of times, x = name of driver | country
-
-
-
 }
 
+// charts data
 interface DashboardChartsData {
   max_competed: any;
   max_championships: any;
-  // Define other properties here
 }
 
+// datapoints for chart
 interface dataPoints{
   name: string;
   y: any;

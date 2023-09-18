@@ -1,5 +1,7 @@
 'use strict';
 
+// creating migration to create table in the database
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -65,3 +67,4 @@ module.exports = {
     await queryInterface.dropTable('Drivers');
   }
 };
+

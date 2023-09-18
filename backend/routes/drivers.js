@@ -10,6 +10,7 @@ const { getAllCountries } = require('../controllers/getAllCountries');
 const { getDriverDataByName } = require('../controllers/getDriverDataByName');
 const { getDataFilterByCountry } = require('../controllers/getAllDataForCountry');
 
+// routing for all the api's related to drivers
 router.get('/drivers', getAllDrivers);
 router.get('/highlights-data', getHighLightsData);
 router.get('/getDashboardChartsData', getDashboardChartData);

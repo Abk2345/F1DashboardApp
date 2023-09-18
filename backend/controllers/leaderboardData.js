@@ -2,7 +2,7 @@ const { sequelize, Sequelize } = require('../models/index'); // Import the Seque
 const { Drivers } = sequelize.models; // Import the Driver model
 
 
-// getting all drivers
+// getting all data for the leaderboard page
 const getLeaderBoardData = async (req, res) => {
     try {
 

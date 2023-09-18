@@ -16,6 +16,7 @@ export class ChampionsComponent implements OnInit {
   constructor(private driverService: DriverService) { }
 
   ngOnInit(): void {
+    // getting champions data
     this.driverService.getChampionsData().subscribe((data)=>{
       console.log(data);
       this.champions_list = data;

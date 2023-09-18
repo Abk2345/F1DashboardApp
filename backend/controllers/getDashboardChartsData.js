@@ -2,7 +2,7 @@ const { sequelize } = require('../models/index'); // Import the Sequelize instan
 const { Drivers } = sequelize.models; // Import the Driver model
 
 
-// getting all drivers
+// getting maxCompetedDriver and maxChampionshipDriver data for charts in dashboard page
 const getDashboardChartData = async (req, res) => {
     try {
 

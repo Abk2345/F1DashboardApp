@@ -1,3 +1,4 @@
+// this componet is for showing sidenav which shows list of all the pages this web app contains
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -13,12 +14,17 @@ import { Location } from '@angular/common';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+  // taking inputs for country and driver names
   @ViewChild('input') input!: ElementRef<HTMLInputElement>;
   @ViewChild('input2') input2!: ElementRef<HTMLInputElement>;
   myControl = new FormControl('');
   myControl2 = new FormControl('');
+
+  // list of country and driver names
   options!: string[];
   options2!: string[];
+
+  // updating filtered options on search using autocomplete
   filteredOptions: string[];
   filteredOptions2: string[];
 
@@ -51,11 +57,12 @@ export class SidenavComponent implements OnInit {
     console.log(this.filteredOptions2);
   }
 
+  // on click of search by country to load all the data very properly
   refreshPage1(): void {
     // Get the current URL
-    const newUrl = `/filter-country/${this.myControl.value}`; // Modify this URL accordingly
+    const newUrl = `/filter-country/${this.myControl.value}`; 
     console.log(newUrl);
-  // Navigate to the new URL using Angular's Router
+    // Navigate to the new URL using Angular's Router
     this.router.navigateByUrl(newUrl).then(() => {
     // Once the navigation is complete, trigger a page reload
     this.location.replaceState(this.router.url);
@@ -63,6 +70,7 @@ export class SidenavComponent implements OnInit {
   });
   }
 
+// on click of search by driver name to load all the data very properly
   refreshPage2(): void {
     // Get the current URL
     const newUrl = `/filter-driver/${this.myControl2.value}`; // Modify this URL accordingly
@@ -78,12 +86,12 @@ export class SidenavComponent implements OnInit {
 
 }
 
+// interface for country list data
 interface CountryData {
   country_list: string[];
-  // Define other properties here
 }
 
+// interface for driver_name_list data
 interface DrivernamesData {
   drivers_name_list: string[];
-  // Define other properties here
 }

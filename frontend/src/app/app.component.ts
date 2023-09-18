@@ -12,8 +12,4 @@ export class AppComponent {
 
   title = 'frontend';
 
-  // Method to toggle the sidenav
-  toggleSidenav(): void {
-    this.sidenav.toggle();
-  }
 }

@@ -39,8 +39,8 @@ select * from "Drivers" where "country" = 'Germany' order by "points" desc, "dri
 
 11. Making Readme and uploading to github -> done
 
-12. Cleaning and organising the code properly -> have to do
+12. Cleaning and organising the code properly -> done
 
-13. Adding snapshots folder
+13. Adding snapshots folder -> done
 
 yayy....

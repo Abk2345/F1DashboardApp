@@ -1,3 +1,4 @@
+<!-- error message showing -->
 <h1 *ngIf="have_error" style="
     background-color: red;
     width: 100%;
@@ -14,6 +15,7 @@
   Selected country: {{country_name}}</h1>
 
 
+  <!-- data table with paginator -->
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">
@@ -69,7 +71,7 @@
 </div>
 
 
-<!-- Charts -->
+<!-- Relevant Charts -->
 <div *ngIf="does_not_have_error" class="mat-elevation-z8" style="display: flex; flex-direction: row; justify-content: space-between; margin: 20px;">
   <div style="width: 45%;">
     <canvasjs-chart [options]="chartOptions" [styles]="{ width: '100%', height: '360px' }"></canvasjs-chart>

@@ -2,7 +2,7 @@ const { sequelize, Sequelize } = require('../models/index'); // Import the Seque
 const { Drivers } = sequelize.models; // Import the Driver model
 
 
-// getting all drivers
+// getting all champions data (who have won at least one championships)
 const getChampionsData = async (req, res) => {
     try {
 

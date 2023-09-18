@@ -1,5 +1,7 @@
 'use strict';
 
+// register all the models with sequelize instance which can further be used for carrying out any operations
+
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');

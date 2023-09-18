@@ -1,13 +1,12 @@
 const express = require('express');
+// creating express app
 const app = express()
-const sequelize = require('./models').sequelize; //Getting instances of sequelize from models
+//Getting instances of sequelize from models
+const sequelize = require('./models').sequelize; 
 // routes
 const driversRoute = require('./routes/drivers');
-
-// using cors
+// using cors for good communication between different ports on localhost (frontend and backend)
 const cors = require('cors');
-
-
 
 // parsing json
 app.use(express.json())

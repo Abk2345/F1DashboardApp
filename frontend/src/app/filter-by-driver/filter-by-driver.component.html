@@ -1,3 +1,4 @@
+<!-- error message showing -->
 <h1
   *ngIf="have_error"
   style="
@@ -14,8 +15,9 @@
 
 <h1 style="background-color: rgb(2, 30, 30); width: 100%; text-align: center; padding: 5px; border-radius: 5px; color: white;">Selected Driver : {{driver_name}}</h1>
 
+<!-- All the data -->
+
 <div *ngIf="does_not_have_error">
-<!-- top highlights -->
 <div style="display: flex; justify-content: space-between;">
     <mat-card class="example-card" style="text-align: center;">
       <mat-card-header class="centered-title">

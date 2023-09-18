@@ -1,7 +1,7 @@
 const { sequelize, Sequelize } = require('../models/index'); // Import the Sequelize instance
 const { Drivers } = sequelize.models; // Import the Driver model
 
-// getting all drivers
+// getting all data entries belonging to this country
 const getDataFilterByCountry = async (req, res) => {
     try {
         const countryName = req.params.country_name;
