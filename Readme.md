@@ -51,8 +51,10 @@ uses:
 2. Running the app using docker image
     1. Download the docker-image of backend: https://hub.docker.com/r/abhi731/f1-dashboard-backend-app
     2. Download the docker-image of frontend: https://hub.docker.com/r/abhi731/f1-dashboard-frontend-app
-    3. Run the frontend docker image using command: (docker run -d -p 4201:80 abhi731/f1-dashboard-frontend-app)
+    3. Run the frontend docker image using command: (docker run -d -p 4200:80 abhi731/f1-dashboard-frontend-app), this will run the app on port 4200
     4. Run the backend docker image using docker-compose file inside the folder "Run-docker-image-compose-file" by goign to this folder and running command (docker-compose up --build)
+    5. If error comes as F1DriversDatabase database does not exit, open new terminal and run these two commands to create this database after running above command (docker-compose up --build), these two commands are: (docker exec -it postgres-container psql -U postgres) and then in the shell (CREATE DATABASE "F1DriversDatabase";) to create the database
+    6. Now, closing all the terminals, open one new terminal in the docker-compose folder and execute command (docker-compose down -v), then (docker-compose up --build) to run the backend properly, it will insert all the data first and then run the backend on port 3000
 
 # Hope you enjoyed!
 
