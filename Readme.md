@@ -67,6 +67,9 @@ uses:
     5. If error comes persists as F1DriversDatabase database does not exit, open new terminal and run these two commands to create this database after running above command (docker-compose up --build), these two commands are: (docker exec -it postgres-container psql -U postgres) and then in the shell (CREATE DATABASE "F1DriversDatabase";) to create the database
     6. Now, closing all the terminals, open one new terminal in the docker-compose folder and execute command (docker-compose down -v), then (docker-compose up --build) to run the backend properly, it will insert all the data first and then run the backend on port 3000
 
+# Further Development
+Testing code could not be written because of lack of time :)
+
 # Hope you enjoyed!
 
 
