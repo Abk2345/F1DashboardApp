@@ -52,7 +52,7 @@ uses:
     1. Download the docker-image of backend: https://hub.docker.com/r/abhi731/f1-dashboard-backend-app
     2. Download the docker-image of frontend: https://hub.docker.com/r/abhi731/f1-dashboard-frontend-app
     3. Run the frontend docker image using command: (docker run -d -p 4201:80 abhi731/f1-dashboard-frontend-app)
-    4. Run the backend docker image using docker-compose file inside the folder "Run-docker-image-compose-file"
+    4. Run the backend docker image using docker-compose file inside the folder "Run-docker-image-compose-file" by goign to this folder and running command (docker-compose up --build)
 
 # Hope you enjoyed!
 
