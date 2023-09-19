@@ -1,7 +1,7 @@
 # F1 Drivers Dashboard Project
-uses:
-    AngularJS: Front-end
-    NodeJs(Sequelize): Back-end
+1. uses:
+    1. AngularJS and Angular Material: Front-end
+    2. NodeJs(Sequelize) and Postgresql Database: Back-end
 
 # Backend Creation
 1. Installation of express, sequelize, sequelize-cli, csv-parser, pg for postgresql database
@@ -68,7 +68,7 @@ uses:
     6. Now, closing all the terminals, open one new terminal in the docker-compose folder and execute command (docker-compose down -v), then (docker-compose up --build) to run the backend properly, it will insert all the data first and then run the backend on port 3000
 
 # Further Development
-Testing code could not be written because of lack of time :)
+Testing modules for the app could not be written because of lack of time :)
 
 # Hope you enjoyed!
 
